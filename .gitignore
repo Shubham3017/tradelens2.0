@@ -1,0 +1,15 @@
+# Backend
+backend/target/
+backend/.settings/
+backend/.classpath
+backend/.project
+backend/.factorypath
+
+# Frontend
+frontend/node_modules/
+frontend/build/
+frontend/.env
+
+# General
+*.log
+.DS_Store
