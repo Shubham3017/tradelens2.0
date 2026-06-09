@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d1117;
+    color: #e2e8f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    min-height: 100vh;
+    background-color: #0a0e17;
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    border-right: 0.5px solid #1e2433;
+}
+
+.sidebar-brand {
+    color: #e2e8f0;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px 5px 20px;
+}
+
+.sidebar-brand-sub {
+    color: #4a5568;
+    font-size: 11px;
+    padding: 0 20px 25px 20px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-link {
+    color: #4a5568;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-link:hover {
+    background-color: #131929;
+    color: #e2e8f0;
+}
+
+.sidebar-link.active {
+    background-color: #131929;
+    color: #e2e8f0;
+    border-left: 3px solid #6366f1;
+}
+
+.sidebar-logout {
+    margin-top: auto;
+    padding: 12px 20px;
+    color: #4a5568;
+    cursor: pointer;
+    border: none;
+    background: none;
+    text-align: left;
+    width: 100%;
+    font-size: 14px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-logout:hover {
+    background-color: #131929;
+    color: #e2e8f0;
+}
+
+/* Main content */
+.main-content {
+    margin-left: 220px;
+    padding: 30px;
+    min-height: 100vh;
+    background-color: #0d1117;
+}
+
+/* Stat Cards */
+.stat-card {
+    background-color: #111827;
+    border-radius: 10px;
+    padding: 20px 25px;
+    border: 0.5px solid #1e2433;
+}
+
+.stat-card .stat-value {
+    font-size: 26px;
+    font-weight: bold;
+    color: #e2e8f0;
+}
+
+.stat-card .stat-label {
+    font-size: 13px;
+    color: #4a5568;
+    margin-top: 4px;
+}
+
+.stat-card .stat-sub {
+    font-size: 12px;
+    color: #374151;
+    margin-top: 2px;
+}
+
+/* Chart containers */
+.chart-container {
+    background-color: #111827;
+    border-radius: 10px;
+    padding: 25px;
+    border: 0.5px solid #1e2433;
+}
+
+/* Insight box */
+.insight-box {
+    background-color: #111827;
+    border-radius: 10px;
+    padding: 25px;
+    border: 0.5px solid #1e2433;
+}
+
+.insight-item {
+    padding: 12px 0;
+    border-bottom: 0.5px solid #1e2433;
+    font-size: 14px;
+    color: #94a3b8;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.insight-item:last-child {
+    border-bottom: none;
+}
+
+/* Table */
+.trade-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.trade-table th {
+    background-color: #111827;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 11px;
+    color: #4a5568;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 0.5px solid #1e2433;
+}
+
+.trade-table td {
+    padding: 12px 15px;
+    border-bottom: 0.5px solid #0f1520;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.trade-table tr:hover td {
+    background-color: #161f30;
+    cursor: pointer;
+}
+
+/* Badges */
+.badge-win {
+    background-color: #052e1640;
+    color: #34d399;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 0.5px solid #34d39960;
+}
+
+.badge-loss {
+    background-color: #450a0a40;
+    color: #f87171;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 0.5px solid #f8717160;
+}
+
+/* Forms */
+.form-container {
+    background-color: #111827;
+    border-radius: 10px;
+    padding: 30px;
+    border: 0.5px solid #1e2433;
+    max-width: 750px;
+}
+
+.form-label {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 500;
+}
+
+.form-control {
+    background-color: #0d1117 !important;
+    border: 0.5px solid #1e2433 !important;
+    color: #e2e8f0 !important;
+    border-radius: 6px;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.form-control:focus {
+    border-color: #6366f1 !important;
+    box-shadow: 0 0 0 3px rgba(99,102,241,0.15) !important;
+    outline: none;
+}
+
+.btn-primary-custom {
+    background-color: #6366f1;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.btn-primary-custom:hover {
+    background-color: #4f52c9;
+}
+
+.btn-primary-custom:disabled {
+    background-color: #1e2433;
+    color: #4a5568;
+    cursor: not-allowed;
+}
+
+/* Progress bars */
+.progress-custom {
+    background-color: #1e2433;
+    border-radius: 10px;
+    height: 10px;
+    margin-bottom: 15px;
+}
+
+.progress-bar-custom {
+    background-color: #6366f1;
+    height: 10px;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+/* Page title */
+.page-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #e2e8f0;
+}
+
+/* Auth pages */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d1117;
+}
+
+.auth-card {
+    background-color: #111827;
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    border: 0.5px solid #1e2433;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+.auth-title {
+    color: #6366f1;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.auth-subtitle {
+    color: #4a5568;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* P&L colors */
+.pnl-positive {
+    color: #34d399;
+    font-weight: bold;
+}
+
+.pnl-negative {
+    color: #f87171;
+    font-weight: bold;
+}
+
+/* Streak box */
+.streak-box {
+    background-color: #111827;
+    border-radius: 10px;
+    padding: 15px 20px;
+    border-left: 3px solid #6366f1;
+    font-size: 15px;
+    color: #94a3b8;
+    border-top: 0.5px solid #1e2433;
+    border-right: 0.5px solid #1e2433;
+    border-bottom: 0.5px solid #1e2433;
+}
+
+/* Section title */
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin-bottom: 15px;
+}
+
+/* Select dropdowns */
+select.form-control option {
+    background-color: #111827;
+    color: #e2e8f0;
+}
