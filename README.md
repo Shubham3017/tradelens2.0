@@ -16,3 +16,4 @@ Features:
 - JWT authentication
 - Dockerized with 3 containers
 - CI/CD with GitHub Actions
+- Deployed on AWS-EC2+RDS+S3 setup
