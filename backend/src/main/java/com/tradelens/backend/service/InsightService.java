@@ -311,9 +311,10 @@ public class InsightService {
                     .filter(t -> t.getEntryTime().getHour() == worstHour).count();
 
             if (bestHourCount >= MIN_HOUR_SAMPLE && worstHourCount >= MIN_HOUR_SAMPLE)
-                insights.add("⏰ Best hour: " + bestHour + ":00 (win rate " +
-                    bestHourWinRate + "%). Worst hour: " + worstHour + ":00 (win rate " +
-                    worstHourWinRate + "%) — consider avoiding it.");
+            	insights.add("⏰ Best hour by avg P&L: " + bestHour + 
+            		    ":00 (win rate " + bestHourWinRate + 
+            		    "%). Chart shows win rate % per hour separately. " +
+            		    "Avoid trading at " + worstHour + ":00 (worst avg P&L).");
             else
                 insights.add("ℹ️ Not enough hourly data yet to determine best/worst trading hour.");
         }
